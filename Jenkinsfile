@@ -12,8 +12,8 @@ pipeline {
             steps {
                 script {
                     def jsonData = readJson file: 'package.json'
-                    appVersion = jsonData.version
-                    echo "Application Version: ${appVersion}"
+                    env.appVersion = jsonData.version
+                    echo "Application Version: ${env.appVersion}"
                 }                
             }
         }
@@ -29,7 +29,7 @@ pipeline {
             cleanWs()
         }
         success {
-            echo "This build is successful. Version: ${appVersion}"
+            echo "This build is successful. Version: ${env.appVersion}"
         }
     }
 }
