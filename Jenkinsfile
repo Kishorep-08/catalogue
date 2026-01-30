@@ -4,9 +4,6 @@ pipeline {
             label 'agent-1'
         }
     }
-    environment {
-        appVersion = ""
-    }
     stages {
         stage ('read JSON') {
             steps {
