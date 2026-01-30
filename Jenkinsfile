@@ -5,7 +5,7 @@ pipeline {
         }
     }
     environment {
-        appVersion = ''
+        appVersion = ""
     }
     stages {
         stage ('read JSON') {
@@ -16,7 +16,7 @@ pipeline {
                 }                
             }
         }
-        stage ('Build') {
+        stage ('Install Dependencies') {
             steps {
                 sh 'npm install'
             }
