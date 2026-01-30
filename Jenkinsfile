@@ -10,8 +10,10 @@ pipeline {
     stages {
         stage ('read JSON') {
             steps {
-                def jsonData = readJson file: 'package.json'
-                appVersion = jsonData.version
+                script {
+                    def jsonData = readJson file: 'package.json'
+                    appVersion = jsonData.version
+                }                
             }
         }
         stage ('Build') {
