@@ -9,7 +9,7 @@ pipeline {
             steps {
                 script {
                     sh 'ls -l'
-                    def jsonData = readJson file: 'package.json'
+                    def jsonData = readJSON file: 'package.json'
                     env.appVersion = jsonData.version
                     echo "Application Version: ${env.appVersion}"
                 }                
