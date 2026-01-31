@@ -1,9 +1,11 @@
 ### Plugins
 
 * Stage view
-  This plugin shows the pipeline status in stages with colours. It is useful for quickly identifying where exactly our pipeline failed.
-  Green- Success
-  Red- Failure
+This plugin shows the pipeline status in stages with colours. It is useful for quickly identifying where exactly our pipeline failed.
+
+**Status colors:**
+- 🟢 Green – Success  
+- 🔴 Red – Failure  
 
 * Pipeline Utility steps
   This plugin add very important functionalities like reading the content of the file (Json, csv, xml ...). We used this plugin to read a Json file.
