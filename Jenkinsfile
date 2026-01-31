@@ -21,6 +21,7 @@ pipeline {
             }
         }
     }
+    // Post build section
     post {
         always {
             echo "Cleaning up workspace..."
