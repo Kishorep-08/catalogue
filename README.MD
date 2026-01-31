@@ -1,6 +1,6 @@
 ### Plugins
 
-* Stage view
+## Stage view
 This plugin shows the pipeline status in stages with colours. It is useful for quickly identifying where exactly our pipeline failed.
 
 **Status colors:**
