@@ -11,10 +11,17 @@ This plugin shows the pipeline status in stages with colours. It is useful for q
   This plugin add very important functionalities like reading the content of the file (Json, csv, xml ...). We used this plugin to read a Json file.
   The function we used is readJSON.
 
-### AWS steps
-  This plugin add functionality with which jenkins can talk to AWS API server. We can do any type of task on AWS using this plugin. 
-  We used this plugin to configure AWS credentials to connect and push our image artifact to ECR.
+### 3. AWS Steps Plugin
+Enables Jenkins to interact with **AWS APIs**.
 
+**Capabilities:**
+- Configure AWS credentials
+- Perform AWS operations from Jenkins pipelines
+
+**Usage in this project:**
+- Configured AWS credentials
+- Connected to AWS
+- Pushed Docker image artifacts to **Amazon ECR**
 
 aws ecr get-login-password --region <region> | docker login --username AWS --password-stdin <aws_account_id>.dkr.ecr.<region>.amazonaws.com
 docker build -t aws_account_id.dkr.ecr.region.amazonaws.com/my-repository:tag
