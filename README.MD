@@ -8,8 +8,8 @@ This plugin shows the pipeline status in stages with colours. It is useful for q
 - 🔴 Red – Failure  
 
 ### 2. Pipeline Utility steps
-  This plugin add very important functionalities like reading the content of the file (Json, csv, xml ...). We used this plugin to read a Json file.
-  The function we used is readJSON.
+-  This plugin add very important functionalities like reading the content of the file (Json, csv, xml ...). We used this plugin to read a Json file.
+-  The function we used is readJSON.
 
 ### 3. AWS Steps Plugin
 Enables Jenkins to interact with **AWS APIs**.
