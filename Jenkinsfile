@@ -106,7 +106,7 @@ pipeline {
                          --scanners vuln \
                          --severity HIGH,CRITICAL,MEDIUM \
                          --pkg-types os \
-                         --exit-code 0 \
+                         --exit-code 1 \
                          --format table \
                          ${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com/${PROJECT}/${COMPONENT}:${appVersion}
                     """ 
