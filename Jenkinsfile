@@ -97,7 +97,8 @@ pipeline {
                 }
             }
         }
-    } */
+     */
+    }
     // Post build section
     post {
         always {
