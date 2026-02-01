@@ -33,6 +33,8 @@ pipeline {
                 sh 'npm test'
             }
         }
+
+        
         stage ('Build Docker image') {
             steps {
                 script {
