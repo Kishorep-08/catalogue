@@ -108,7 +108,7 @@ pipeline {
                          --pkg-types os \
                          --exit-code 0 \
                          --format table \
-                         ${ACC_ID}.dkr.ecr.us-east-1.amazonaws.com/${PROJECT}/${COMPONENT}:${appVersion}
+                         ${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com/${PROJECT}/${COMPONENT}:${appVersion}
                     ''' 
                 }
             }
