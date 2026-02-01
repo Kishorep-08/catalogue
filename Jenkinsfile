@@ -101,7 +101,7 @@ pipeline {
         stage ('Trivy scan') {
             steps {
                 script {
-                    sh """
+                    sh '''
                          trivy image \
                          --scanners vuln \
                          --severity HIGH,CRITICAL,MEDIUM \
@@ -109,7 +109,7 @@ pipeline {
                          --exit-code 1 \
                          --format table \
                          ${ACC_ID}.dkr.ecr.us-east-1.amazonaws.com/${PROJECT}/${COMPONENT}:${appVersion}
-                    """ 
+                    ''' 
                 }
             }
         }
