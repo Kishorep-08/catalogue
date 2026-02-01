@@ -49,7 +49,7 @@ pipeline {
                     response=$(curl -s \
                         -H "Authorization: token ${GITHUB_TOKEN}" \
                         -H "Accept: application/vnd.github+json" \
-                        "${GITHUB_API}/repos/${GITHUB_OWNER}/${GITHUB_REPO}/dependabot/alerts")
+                        "${GITHUB_API}/repos/${GITHUB_OWNER}/${GITHUB_REPO}/dependabot/alerts?per_page=100")
 
                     echo "${response}" > dependabot_alerts.json
 
@@ -82,7 +82,7 @@ pipeline {
         }
 
 
-        /* stage ('Build Docker image') {
+        stage ('Build Docker image') {
             steps {
                 script {
                     withAWS(region:'us-east-1',credentials:'aws-auth') {
@@ -90,14 +90,14 @@ pipeline {
                             aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com
                             docker build -t ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT}/${COMPONENT}:${appVersion} .
                             docker images
-                            docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT}/${COMPONENT}:${appVersion}
+                            // docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT}/${COMPONENT}:${appVersion}
 
                         """
                     }
                 }
             }
         }
-     */
+    
     }
     // Post build section
     post {
