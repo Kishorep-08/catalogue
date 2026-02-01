@@ -82,7 +82,7 @@ pipeline {
         }
 
 
-        stage ('Build Docker image') {
+        /* stage ('Build Docker image') {
             steps {
                 script {
                     withAWS(region:'us-east-1',credentials:'aws-auth') {
@@ -97,7 +97,7 @@ pipeline {
                 }
             }
         }
-    }
+    } */
     // Post build section
     post {
         always {
